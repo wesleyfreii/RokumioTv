@@ -1,14 +1,14 @@
 /* Rokumio | Minimal responsive brand system */
 :root{
   color-scheme:dark;
-  --bg:#0a0b0e;--panel:#121419;--panel2:#171a20;--line:#292c34;
-  --text:#f7f8fa;--muted:#a7adb8;--accent:#ff861d;--accent2:#ffb368;
+  --bg:#090613;--panel:#141024;--panel2:#1c1530;--line:#332949;
+  --text:#f8f6ff;--muted:#b9b0cf;--accent:#a477ff;--accent2:#c5a9ff;
   --max:1080px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
-body:before{content:"";z-index:-1;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:650px;background:radial-gradient(ellipse at 70% 0%,rgba(255,134,29,.095),transparent 52%)}
+body:before{content:"";z-index:-1;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:650px;background:radial-gradient(ellipse at 70% 0%,rgba(160,112,255,.14),transparent 52%)}
 a{color:inherit;text-decoration:none}
 a:hover{color:var(--accent2)}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
@@ -17,7 +17,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius
 .header-inner{min-height:80px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 .logo{display:inline-flex;align-items:center;gap:11px;font-size:25px;font-weight:850;letter-spacing:-1.1px;white-space:nowrap;line-height:1.2}
 .logo em{font-style:normal;color:var(--accent)}
-.symbol{background:var(--accent);color:#18100a;width:38px;height:38px;display:grid;place-items:center;border-radius:12px;font-weight:900;font-size:24px;letter-spacing:-2px}
+.symbol{background:var(--accent);color:#130d21;width:38px;height:38px;display:grid;place-items:center;border-radius:12px;font-weight:900;font-size:24px;letter-spacing:-2px}
 nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap;color:#c3c7cf;font-size:13px;font-weight:650}
 nav a[aria-current="page"]{color:var(--accent)}
 .hero{position:relative;padding:105px 0 75px;max-width:900px}
@@ -28,22 +28,22 @@ nav a[aria-current="page"]{color:var(--accent)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .btn{min-height:49px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:11px;padding:12px 20px;font-size:14px;font-weight:750;border:1px solid var(--line);transition:background .18s,transform .18s}
 .btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#1a110c}
-.btn.primary:hover{background:var(--accent2);color:#1a110c}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#190d27}
+.btn.primary:hover{background:var(--accent2);color:#190d27}
 .btn.secondary{background:var(--panel2);color:var(--text)}
-.btn.secondary:hover{background:#23262d;color:#fff}
+.btn.secondary:hover{background:#2b2240;color:#fff}
 .hero-rule{height:1px;max-width:710px;background:linear-gradient(90deg,var(--accent),transparent);margin:55px 0 23px}
 .micro{font-size:12px;color:#959ba6}
 .section-heading{margin:0 0 22px;font-size:26px;letter-spacing:-.04em}
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .card{min-height:220px;position:relative;display:block;padding:29px;border:1px solid var(--line);border-radius:17px;background:var(--panel);transition:border-color .18s,transform .18s}
-.card:hover{transform:translateY(-3px);border-color:#84532b;color:var(--text)}
-.card-icon{display:grid;place-items:center;width:47px;height:47px;background:#322215;color:var(--accent2);font-size:24px;border-radius:13px;margin-bottom:19px}
+.card:hover{transform:translateY(-3px);border-color:#7357a7;color:var(--text)}
+.card-icon{display:grid;place-items:center;width:47px;height:47px;background:#29203d;color:var(--accent2);font-size:24px;border-radius:13px;margin-bottom:19px}
 .card strong{display:block;font-size:20px;letter-spacing:-.03em;margin-bottom:5px}
 .card p{font-size:14px;color:var(--muted);margin:0;max-width:390px}
 .card-arrow{position:absolute;right:24px;top:26px;color:var(--accent);font-size:22px}
 .home-section{padding:0 0 68px}
-.home-bottom{margin-bottom:88px;padding:30px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(110deg,#15181d,#101114);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.home-bottom{margin-bottom:88px;padding:30px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(110deg,#191429,#0e0b18);display:flex;justify-content:space-between;align-items:center;gap:20px}
 .home-bottom h2{font-size:22px;letter-spacing:-.035em;margin:0 0 7px}
 .home-bottom p{color:var(--muted);font-size:14px;margin:0;max-width:580px}
 .footer{border-top:1px solid var(--line);padding:29px 0 39px;color:var(--muted);font-size:12px}
@@ -57,7 +57,7 @@ nav a[aria-current="page"]{color:var(--accent)}
 .sidebar{position:sticky;top:25px;background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:19px}
 .sidebar span{display:block;text-transform:uppercase;font-size:11px;letter-spacing:.14em;color:var(--muted);font-weight:800;margin-bottom:10px}
 .sidebar a{display:block;font-size:13px;color:#c0c6d0;padding:10px 9px;border-radius:8px;line-height:1.4}
-.sidebar a:hover{background:#22262c;color:var(--accent2)}
+.sidebar a:hover{background:#231c38;color:var(--accent2)}
 article{font-size:15.5px;color:#c8ced8;min-width:0}
 article section{scroll-margin-top:30px;border-bottom:1px solid var(--line);padding:0 0 22px;margin-bottom:28px}
 article section:last-child{border:0;margin:0}
@@ -66,7 +66,7 @@ article p{margin:0 0 15px}
 article ul{padding-left:21px}
 article li{margin-bottom:10px}
 article a{color:var(--accent2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:#7d583c}
-.note{background:#201a15;border:1px solid #714725;border-radius:13px;padding:16px 19px;color:#f0d6bf;font-size:14px;margin:0 0 30px}
+.note{background:#21172f;border:1px solid #564075;border-radius:13px;padding:16px 19px;color:#e4d9ff;font-size:14px;margin:0 0 30px}
 .note strong{color:var(--accent2)}
 .contact{margin:18px 0;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
 .contact small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:750;margin-bottom:6px}
@@ -91,3 +91,31 @@ article a{color:var(--accent2);text-decoration:underline;text-underline-offset:4
  article section{scroll-margin-top:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
+
+
+/* Rokumio purple identity based on the official poster */
+body{background:radial-gradient(ellipse at 12% 0%,rgba(114,58,216,.19),transparent 39%),radial-gradient(ellipse at 90% 72%,rgba(124,58,228,.12),transparent 41%),var(--bg)}
+body:before{background:radial-gradient(ellipse at 85% 15%,rgba(153,100,255,.12),transparent 60%)}
+.header{background:rgba(9,6,19,.88)}
+.logo{gap:11px}
+.symbol{background:transparent;color:transparent;font-size:0;box-shadow:none;width:39px;height:39px;border:3px solid var(--accent);border-radius:100%;position:relative}
+.symbol:after{content:"";width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:14px solid var(--accent);position:absolute;top:50%;left:53%;transform:translate(-50%,-50%)}
+.logo em{color:var(--text)}
+.logo{letter-spacing:-1.1px}
+.hero{max-width:none;padding:94px 0 78px}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);align-items:center;gap:48px}
+.hero-copy{min-width:0}
+.hero-art{border:1px solid rgba(183,143,255,.14);border-radius:25px;overflow:hidden;position:relative;background:#0d0918;box-shadow:0 28px 85px rgba(79,38,151,.25);max-width:440px;margin-inline:auto}
+.hero-art img{display:block;width:100%;height:auto}
+.hero-art:after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 1px rgba(255,255,255,.045)}
+.btn.primary{color:#180e28;box-shadow:0 12px 30px rgba(130,77,225,.21)}
+.btn.primary:hover{color:#180e28}
+.card{background:linear-gradient(145deg,#17122a,#100c1d)}
+.card:hover{border-color:#7357a7}
+.card-icon{background:#281f3d}
+.sidebar{background:#151025}
+.home-bottom{background:linear-gradient(100deg,#1b1530,#100c1b)}
+.note{background:#201832}
+.contact{background:#151025}
+@media(max-width:950px){.hero-layout{grid-template-columns:1fr;gap:36px}.hero{padding:65px 0 66px}.hero-art{width:min(100%,440px);margin-inline:0}}
+@media(max-width:740px){.hero{padding:58px 0 55px}.hero-layout{gap:34px}.hero-art{width:min(100%,420px)}}
