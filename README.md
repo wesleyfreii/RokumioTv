@@ -1,40 +1,37 @@
-# Site legal do Rokumio
+# Rokumio — Site de documentação
 
-Site estático responsivo em português com três páginas:
+Site oficial de documentação do projeto Rokumio. Estático, responsivo, em português (Brasil), sem frameworks e sem etapas de compilação.
 
-- `index.html`: página inicial.
-- `privacidade/index.html`: Política de Privacidade.
-- `termos/index.html`: Termos e Condições.
+## Páginas
+- Início: `index.html`
+- Política de Privacidade: `privacidade/index.html`
+- Termos e Condições: `termos/index.html`
+- Suporte: `suporte/index.html`
 
-## IMPORTANTE: personalização antes de publicar
+O CSS está em `assets/style.css`. **Todos os links e recursos são relativos à localização do HTML**, permitindo abrir `index.html` localmente, publicar na raiz de uma hospedagem como a Vercel ou hospedar em um subdiretório no GitHub Pages.
 
-Os textos são **modelos**, não uma avaliação jurídica nem uma descrição verificada do app. Faça busca nos arquivos `.html` por `[` e `]`, revise **todos** os campos destacados (incluindo titular, endereço de e-mail de contato, práticas reais de dados, terceiros, retenção, perfil etário, situação dos direitos dos conteúdos, assinaturas/monetização e funcionalidades).
+## Responsável público e suporte
+- Projeto/canal: Rokumio
+- Perfil público do mantenedor: https://github.com/wesleyfreii
+- Canal de suporte: https://github.com/wesleyfreii/RokumioTv/issues
 
-Remova os avisos de "modelo" das páginas **somente depois** de verificar e preencher os fatos. Na página de privacidade, descreva com precisão as práticas dos serviços integrados ao canal, incluindo possíveis anúncios, analytics, SDKs e identificadores do dispositivo. Atualize as datas quando publicar a versão final. Se houver uso de conta, login, pagamentos ou coleta de dados de crianças, complemente as seções correspondentes. Considere uma revisão jurídica antes da publicação.
+### Antes de usar as páginas na submissão final da loja Roku
+O mantenedor **não forneceu ainda** o nome civil/empresarial e um e-mail ou outro meio privado adequado para pedidos de privacidade; ambos são relevantes para finalizar a identificação legal e o contato. **Não invente essas informações.** Atualize os documentos com os dados reais.
 
-## Publicar na Vercel sem pagar hospedagem
+As informações sobre funcionalidades foram baseadas no pacote do aplicativo Roku fornecido localmente: o código inclui conexões de bibliotecas Jellyfin e complementos compatíveis com o formato Stremio. Confirme se a versão efetivamente enviada à loja corresponde a essas funcionalidades, quais dados e tokens são transmitidos, se há SDK de anúncios/análise, política para menores, práticas de retenção, fontes de conteúdo e eventuais assinaturas. O conteúdo deve ser revisto antes de informar as URLs à Roku. Esta documentação não é parecer jurídico e não garante aprovação na loja.
 
-1. Crie um repositório no GitHub e envie **os arquivos e pastas de dentro desta pasta** (sem colocar todos os arquivos dentro de uma pasta extra no repositório).
-2. Acesse https://vercel.com, entre com o GitHub e escolha **Add New > Project**.
-3. Importe o repositório. Para um site HTML simples, selecione **Other** se necessário, deixe Build Command vazio e use o diretório raiz como Output Directory.
-4. Clique em **Deploy**. A plataforma fornecerá uma URL pública com HTTPS, como `seu-projeto.vercel.app`.
-5. Teste os seguintes endereços públicos:
-   - `https://SEU-PROJETO.vercel.app/privacidade/`
-   - `https://SEU-PROJETO.vercel.app/termos/`
-6. Cole cada URL em seu campo correspondente no cadastro do canal Roku.
+## Publicação
 
-Também é possível hospedar o site no Cloudflare Pages ou no GitHub Pages, com eventuais ajustes de configuração. Planos gratuitos estão sujeitos às condições dos provedores; o Hobby da Vercel pode ter restrições de uso comercial.
+### GitHub Pages (grátis)
+Em Settings > Pages, escolha Deploy from a branch, branch `main` e pasta `/ (root)`. Os caminhos terão o formato:
+- `https://wesleyfreii.github.io/RokumioTv/`
+- `https://wesleyfreii.github.io/RokumioTv/privacidade/`
+- `https://wesleyfreii.github.io/RokumioTv/termos/`
+
+### Vercel
+Importe `wesleyfreii/RokumioTv` e use preset "Other" (site HTML estático), diretório raiz, sem build command. Na raiz do site implantado, utilize os caminhos `/privacidade/` e `/termos/`.
 
 ## Teste local
+Execute `python3 -m http.server 8000` na pasta raiz e visite http://localhost:8000/.
 
-Na pasta do projeto, rode:
-
-```bash
-python -m http.server 8000
-```
-
-Abra `http://localhost:8000/`.
-
-## Tecnologia
-
-HTML + CSS puros. Sem backend, conta, banco de dados, bibliotecas externas, rastreadores ou cookies adicionados pelo código do site. O serviço de hospedagem pode coletar logs técnicos.
+O site, por si só, não adiciona cookies, rastreadores, publicidade, login ou formulários. O host pode produzir logs técnicos de acesso.
