@@ -1,0 +1,49 @@
+name: Relatar problema
+description: Informe uma falha do Rokumio sem expor dados pessoais.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Atenção:** este repositório hospeda o site de documentação. Se o erro for no canal Roku, informe os detalhes abaixo para triagem. Não envie senhas, tokens, códigos de ativação ou URLs privadas.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Onde ocorre?
+      options:
+        - Site de documentação
+        - Canal Roku
+        - Integração com serviço externo
+        - Não sei
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Modelo do dispositivo (se aplicável)
+      placeholder: Ex. Roku Express, Roku TV
+  - type: input
+    id: version
+    attributes:
+      label: Versão do aplicativo (se souber)
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir?
+      description: Descreva os passos sem incluir credenciais ou links privados.
+      placeholder: "1. Abro...\n2. Seleciono...\n3. Ocorre..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu?
+    validations:
+      required: true
