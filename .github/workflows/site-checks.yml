@@ -1,0 +1,23 @@
+name: Validar site
+on:
+  push:
+    paths:
+      - "**/*.html"
+      - "assets/*.css"
+      - "scripts/**"
+      - ".github/workflows/site-checks.yml"
+  pull_request:
+    paths:
+      - "**/*.html"
+      - "assets/*.css"
+      - "scripts/**"
+      - ".github/workflows/site-checks.yml"
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar HTML, acessibilidade básica e links internos
+        run: python3 scripts/check_site.py

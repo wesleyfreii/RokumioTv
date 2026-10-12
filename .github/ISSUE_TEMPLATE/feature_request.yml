@@ -1,0 +1,29 @@
+name: Sugerir melhoria
+description: Proponha uma melhoria para o site ou canal Rokumio.
+title: "[Melhoria] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Site de documentação
+        - Navegação do canal Roku
+        - Reprodução
+        - Integrações
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema a melhoria resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Como você imagina a solução?
+    validations:
+      required: true
